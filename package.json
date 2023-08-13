@@ -18,7 +18,6 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
-    "@zachsents/sheets-db": "^1.0.1",
     "dayjs": "^1.11.9",
     "devextreme": "23.1.4",
     "devextreme-angular": "23.1.4",

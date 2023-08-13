@@ -17,21 +17,25 @@
 <form class="login-form" (submit)="onSubmit($event)">
   <dx-form [formData]="formData" [disabled]="loading">
     <dxi-item
-      dataField="email"
+      dataField="user"
       editorType="dxTextBox"
       [editorOptions]="{
         stylingMode: 'filled',
-        placeholder: 'Email',
-        mode: 'email'
+        placeholder: 'User',
       }"
     >
+      <dxi-validation-rule
+        type="stringLength"
+        [min]="5"
+        message="Min 5 symbols"
+      ></dxi-validation-rule>
       <dxi-validation-rule
         type="required"
         message="Email is required"
       ></dxi-validation-rule>
       <dxi-validation-rule
-        type="email"
-        message="Email is invalid"
+        type="required"
+        message="User is invalid"
       ></dxi-validation-rule>
       <dxo-label [visible]="false"></dxo-label>
     </dxi-item>
@@ -99,7 +103,7 @@
 </form>
 
 <dx-box direction="col" width="100%" class="wrapper">
-  <dxi-item class=" wrapper-header rect" [ratio]="1"> Header </dxi-item>
+  <dxi-item class="wrapper-header rect" [ratio]="1"> Header </dxi-item>
   <dxi-item class="rect" [ratio]="10" [baseSize]="10">
     <dx-box direction="row">
       <dxi-item class="rect" baseSize="20%">Left</dxi-item>
