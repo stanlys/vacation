@@ -8,7 +8,7 @@ export const characterAttributesMapping = {
   id: 'id',
   login: 'login',
   password: 'password',
-  role: ' user role',
+  role: ' role',
   owner: 'owner',
 };
 
